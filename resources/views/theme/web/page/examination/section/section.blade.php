@@ -11,6 +11,7 @@
 
 <div class="page countdown-1" style="position: fixed; right: 8%; top: 30px;"> 
     <div class="number">
+        <span class="num"></span>
         <span class="num3">3</span>
         <span class="num2">2</span>
         <span class="num1">1</span>

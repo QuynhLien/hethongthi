@@ -5,7 +5,7 @@
 @endsection
 
 @section('css')
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/themes/app/page/admin/css/contract.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/themes/app/page/admin/css/examination.css')}}" />
 @endsection
 
 @section('page_header')

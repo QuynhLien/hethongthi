@@ -49,7 +49,7 @@ setTimeout(function() {
     $('.countdown-1').addClass('d-none');
     $('.countdown-2').removeClass('d-none');
     startTimer();
-}, 5000);
+}, 4000);
 
 function onTimesUp() {
     clearInterval(timerInterval);
