@@ -2,12 +2,12 @@
     <div class="container-hm-header">
         <div class="slim-header-left">
             <a href="" id="slimSidebarMenu" class="slim-sidebar-menu"><span></span></a>
-            <h2 class="title-logo-header"><img src="{{asset('assets/images/favico.png')}}" height="40"> HỆ THỐNG QUẢN LÝ THI CỬ</h2>
+            <h2 class="title-logo-header"><img src="{{asset('assets/images/logo_summer.svg')}}" height="40"> HỆ THỐNG QUẢN LÝ THI CỬ</h2>
         </div><!-- slim-header-left -->
     </div><!-- container-fluid -->
 
     <div class="header-home-right">
-            <ul class="nav nav-gray-600 flex-column flex-md-row" role="tablist" style="background: #bbf524">
+            <ul class="nav nav-gray-600 flex-column flex-md-row" role="tablist" style="background: #60c1f2">
                 <li class="nav-item" style="margin: auto;">
                     <div class="dropdown dropdown-c nav-hm-header _1 top-hm-header" id="nav-header">
                         <a href="#" class="logged-user" data-toggle="dropdown">

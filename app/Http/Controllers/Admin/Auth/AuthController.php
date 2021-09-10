@@ -35,7 +35,7 @@ class AuthController extends Controller
     }
 
     public function index(Request $request){
-        return redirect()->route('operator.core');
+        return redirect()->route('operator.dashboard');
     }
 
     public function logout(){

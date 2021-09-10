@@ -44,6 +44,21 @@ Route::group(['middleware' => ['auth.web']], function () {
 
     //EXAMINATION
     Route::group(['namespace' => 'Examination', 'prefix' => 'examination'], function () {
-        Route::get('/{id}', 'ExaminationController@get_examination')->name('operator.examination.group');
+        Route::get('/{test}/{group}', 'ExaminationController@get_examination')->name('operator.examination.group');
+    });
+
+    //DASHBOARD
+    Route::group(['namespace' => 'Dashboard', 'prefix' => 'dashboard'], function () {
+        Route::get('/', 'DashboardController@get_dashboard')->name('operator.dashboard');
+    });
+
+    //RANDOM
+    Route::group(['namespace' => 'Random', 'prefix' => 'random'], function () {
+        Route::get('/', 'RandomController@get_random')->name('operator.random');
+    });
+
+    //THANK YOU
+    Route::group(['namespace' => 'Thankyou', 'prefix' => 'thankyou'], function () {
+        Route::get('/', 'ThankyouController@get_thankyou')->name('operator.thankyou');
     });
 });

@@ -6,6 +6,7 @@
 
 @section('css')
     <link rel="stylesheet" type="text/css" href="{{asset('assets/themes/app/page/admin/css/examination.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/themes/app/page/admin/css/record_audio.css')}}" />
 @endsection
 
 @section('page_header')
@@ -16,14 +17,19 @@
 @endsection
 
 @section('page_content')
-    <div class="section-wrapper">
+    <div class="section-wrapper-exam">
         @include('theme.web.page.examination.section.section')
     </div>
 @endsection
 
 @section('js')
     <script>
+        var time_start = "{!! $time_start !!}";
         var time = {!! $time !!};
+        var test = {!! $test !!};
+        var group = {!! $group !!};
+        var next_group = {!! $next_group !!};
     </script>
     <script src="{{asset('assets/themes/app/page/admin/js/examination.js')}}"></script>
+    <script src="{{asset('assets/themes/app/page/admin/js/record_audio.js')}}"></script>
 @endsection

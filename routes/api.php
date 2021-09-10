@@ -83,6 +83,16 @@ Route::group(['middleware' => ['auth.api', 'jwt.blacklist']], function () {
         Route::post('add/v1', 'GroupController@notification_add');
     });
 
+    // EXAMINATION 
+    Route::group(['namespace' => 'Examination', 'prefix' => 'examination'], function () {
+        Route::post('record', 'ExaminationController@api_upload_record');
+    });
+
+    // RANDOM 
+    Route::group(['namespace' => 'Random', 'prefix' => 'random'], function () {
+        Route::get('/v1', 'RandomController@api_random');
+    });
+
 });
 // Notification call from mobile
 Route::post('notification/get/v1', 'Notification\NotificationController@notification_get_from_mobile')->name('operator.medical.notification.get.mobile.get');

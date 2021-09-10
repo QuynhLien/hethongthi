@@ -576,7 +576,7 @@ var run_waitMe = function (el, stop) {
     $(el).waitMe({
       effect: 'timer',
       text: 'お待ちください',
-      bg: 'unset',
+      bg: 'rgb(255 255 255 / 49%)',
       color: '#000',
       maxSize: '',
       waitTime: -1,

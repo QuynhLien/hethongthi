@@ -17,6 +17,7 @@ use LiamWiltshire\LaravelJitLoader\Concerns\AutoloadsRelationships;
  * @property int $id
  * @property string $name
  * @property Carbon $date
+ * @property int $status
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $deleted_at
@@ -41,6 +42,12 @@ class Core extends Model
 
 	protected $fillable = [
 		'name',
-		'date'
+		'date',
+		'status'
 	];
+
+	public function tests()
+	{
+		return $this->hasMany(Test::class, 'core_id');
+	} 
 }

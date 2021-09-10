@@ -1,6 +1,6 @@
 <div class="table-wrapper mg-t-60">
     <table width="100%" id="table_group"
-        class="table table-group table-bordered table-hover">
+        class="table table-group table-bordered table-hover table-striped">
         <thead class="thead-colored bg-info">
         <tr>
             <th>STT</th>

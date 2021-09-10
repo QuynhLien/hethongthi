@@ -41,14 +41,15 @@ class UserTableSeeder extends Seeder
         }
 
         //3: Student
-        $mail_student = ['student1@mail.com', 'student2@mail.com', 'student3@mail.com', 'student4@mail.com', 'student5@mail.com'];
-        $name_student = ['Student 1', 'Student 2', 'Student 3', 'Student 4', 'Student 5'];
-        for($i = 0; $i < 5; $i++){
+        $mail_student = ['hoangkhang@mail.com', 'minhthuan@mail.com', 'huuduy@mail.com', 'macly@mail.com', 'daihiep@mail.com', 'ngocnam@mail.com', 'vantai@mail.com'];
+        $name_student = ['Nguyễn Hoàng Khang', 'Nguyễn Huỳnh Minh Thuận', 'Trần Hữu Duy', 'Thạch Mạc Ly', 'La Đại Hiệp', 'Phạm Ngọc Nam', 'Nguyễn Văn Tài'];
+        for($i = 0; $i < 7; $i++){
             Model\MUser::create([
                 'mail' => $mail_student[$i],
                 'name' => $name_student[$i],
                 'password' => Hash::make('123456'),
-                'role' => 3
+                'role' => 2, //'role' => 3,
+                'test_id' => $i+1
             ]);
         }
     }

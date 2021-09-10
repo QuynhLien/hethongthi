@@ -21,6 +21,7 @@ class CreateCoreTable extends Migration
             $table->bigInteger('id',true);
             $table->string('name', 191);
             $table->timestamp('date');
+            $table->tinyInteger('status')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

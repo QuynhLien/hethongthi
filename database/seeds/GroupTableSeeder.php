@@ -12,7 +12,12 @@ class GroupTableSeeder extends Seeder
      */
     public function run()
     {
-        $data = ['PHẦN THI 8 CÂU ĐƠN LẺ', 'ĐOẠN HỘI THOẠI CÓ THỜI GIAN ĐỂ GHI NHỚ', '' , ''];
+        $data = [
+            '発音・反射・イントネーション', 
+            '記録力', 
+            '聞き取る・反射' , 
+            'グループの会話を開始すること'
+        ];
         $time = [90, 105, 60, 600];
         for($core = 1; $core <= 5; $core++){
             for($code_test = 1; $code_test <= 7; $code_test++){

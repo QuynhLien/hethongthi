@@ -3,12 +3,12 @@
   height: 30px;
 }
 
+.microphone:hover {
+  transform: scale(1.2);
+}
+
 .number {
-  font-size: 140px;
-  color: #778F9B;
-  line-height: 300px;
-  position: relative;
-  text-align: center;
+  line-height: 5px;
 }
 .number span {
   position: absolute;
@@ -27,7 +27,7 @@
 }
 
 .num3, .num2, .num1 {
-  color: green;
+  color: #15579c;
 }
 
 .num {
@@ -67,7 +67,7 @@
 
 .base-timer__path-elapsed {
   stroke-width: 7px;
-  stroke: grey;
+  stroke: rgb(0 0 0 / 10%);
 }
 
 .base-timer__path-remaining {
@@ -81,15 +81,15 @@
 }
 
 .base-timer__path-remaining.green {
-  color: rgb(65, 184, 131);
+  color: rgb(123, 216, 174);
 }
 
 .base-timer__path-remaining.orange {
-  color: orange;
+  color: rgb(197, 134, 18);
 }
 
 .base-timer__path-remaining.red {
-  color: red;
+  color: rgb(163, 16, 16);
 }
 
 .base-timer__label {
@@ -101,4 +101,11 @@
   align-items: center;
   justify-content: center;
   font-size: 48px;
+  color: #fff;
+}
+
+audio.exam::-webkit-media-controls-play-button,
+audio.exam::-webkit-media-controls-panel {
+  background-color:  #5186be80;
+  color: #fff;
 }
