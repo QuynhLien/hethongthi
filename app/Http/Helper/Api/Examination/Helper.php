@@ -21,7 +21,7 @@ use Auth;
 use Carbon\Carbon;
 use \stdClass;
 use App\Model;
-use Storage;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Crypt;
 use App\Jobs\SendMail;
