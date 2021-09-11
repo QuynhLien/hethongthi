@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://wellcomejp.herokuapp.com/public'),
+    'url' => env('APP_URL', 'https://wellcomejp.herokuapp.com'),
 
     'asset_url' => env('ASSET_URL', null),
 
