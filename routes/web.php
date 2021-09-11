@@ -61,4 +61,8 @@ Route::group(['middleware' => ['auth.web']], function () {
     Route::group(['namespace' => 'Thankyou', 'prefix' => 'thankyou'], function () {
         Route::get('/', 'ThankyouController@get_thankyou')->name('operator.thankyou');
     });
+
+    Route::get('/linkstorage', function () {
+        Artisan::call('storage:link');
+    });
 });
