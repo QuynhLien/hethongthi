@@ -31,6 +31,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        \URL::forceScheme('https');
+
         view()->composer('*',function($view) {
             $token = Cookie::get('_token_mainte');
             if(!empty($token)){
