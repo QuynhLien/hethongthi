@@ -80,13 +80,6 @@ return [
             base_path('/public_html/storage') => storage_path('app/public'),
         ],
 
-        'public_prod' => [
-            'driver' => 'local',
-            'root' => public_path('app/public_html/'),
-            'url' => env('APP_URL') . '/storage',
-            'visibility' => 'public',
-        ],
-
     ],
 
 ];
