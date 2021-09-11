@@ -42,7 +42,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
       audio.muted = false;
       audio.controls = true;
-      audio.controlsList = "nodownload";
+      // audio.controlsList = "nodownload";
       const blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
       chunks = [];
       const audioURL = window.URL.createObjectURL(blob);
