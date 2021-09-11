@@ -41,7 +41,7 @@ class Helper extends HelperBase
             $user = $this->getUser();
             $file = $request->file('audio_data');
             $path = "uploads/" . $user->name . " - " . $request->test . "/Phần thi số " . $request->group . "/Câu" . $request->question . ".mp3";
-            Storage::disk('links')->put($path, file_get_contents($file));
+            Storage::disk('public_prod')->put($path, file_get_contents($file));
         } catch (\Exception $e) {
             $this->__writeLog500($request->ip(), $request->method(), $request->path(), $e);
             return $this->JsonExportAPI(500, config('constant.msg_500'));
