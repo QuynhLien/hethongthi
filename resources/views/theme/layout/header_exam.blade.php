@@ -18,7 +18,7 @@
                                 <!-- <h6 class="tx-12">Học viên</h6> -->
                                 <p class="mg-b-0 tx-16">{{$user['name']}}</p>
                             </div>
-                            <img src="http://113.161.77.18:9901/assets/images/down-arrow.svg">
+                            <img src="{{asset('assets/images/down-arrow.svg')}}">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <nav class="nav">
