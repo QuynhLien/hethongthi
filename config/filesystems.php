@@ -82,7 +82,7 @@ return [
 
         'public_prod' => [
             'driver' => 'local',
-            'root' => public_path('audio/'),
+            'root' => public_path('app/public_html/'),
             'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
         ],
