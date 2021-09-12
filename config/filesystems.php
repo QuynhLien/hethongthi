@@ -80,9 +80,9 @@ return [
             base_path('/public_html/storage') => storage_path('app/public'),
         ],
 
-        'public_prod' => [
+        'public_audio' => [
             'driver' => 'local',
-            'root' => public_path('app/public_html/'),
+            'root' => public_path('audio/'),
             'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
         ],

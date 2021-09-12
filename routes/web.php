@@ -62,6 +62,11 @@ Route::group(['middleware' => ['auth.web']], function () {
         Route::get('/', 'ThankyouController@get_thankyou')->name('operator.thankyou');
     });
 
+    //GET AUDIO
+    Route::group(['namespace' => 'GetAudio', 'prefix' => 'ketqua'], function () {
+        Route::get('/', 'GetAudioController@get_audio')->name('operator.get_audio');
+    });
+
     Route::get('/linkstorage', function () {
         Artisan::call('storage:link');
     });
