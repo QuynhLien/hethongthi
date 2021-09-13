@@ -636,14 +636,17 @@ span.tx-danger.change {
   border-radius: 1.3125em !important; }
 
 .swal2-styled.swal2-confirm {
-  font-weight: 500 !important;
+  /* font-weight: 500 !important; */
   border-radius: 25px !important;
-  background: linear-gradient(-58deg, #14385c, #3d6b65 100%) !important;
-  color: #ffffff !important;
+  /* background: linear-gradient(-58deg, #14385c, #3d6b65 100%) !important; */
+  /* color: #ffffff !important; */
   padding: 10px 45px !important;
   border: 0 !important;
-  font-size: 17.7px !important;
-  letter-spacing: 3px; }
+  /* font-size: 17.7px !important; */
+  /* letter-spacing: 3px; */
+  background: #fff;
+  font-weight: bold;
+  /* padding: 5px 30px; */} 
 
 .swal2-styled.swal2-cancel {
   font-weight: 500 !important;

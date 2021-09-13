@@ -16,7 +16,9 @@ alert: {
 }
 };
 
-var TIME_LIMIT = parseInt(time); //xanh
+const TIME_LIMIT = parseInt(time); //xanh
+const TIME_GHINHO = 30; //xanh
+const TIME_LAMBAI = 50; //xanh
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -24,17 +26,22 @@ let remainingPathColor = COLOR_CODES.info.color;
 
 if (moment(moment(time_start).add(20, 'minutes').format('YYYY-MM-DD HH:mm:ss')) <= moment()) { //chi cho thi trong 20p, het se bi session time out
     onTimesUp();
-    run_waitMe('.wait-containter');
-    window.location.replace(base_admin + "/thankyou");
+    Swal.fire({
+        text: "Đã hết thời gian làm bài!",
+        customClass: 'swal-exam',
+    }).then(function(result) {
+        run_waitMe('.wait-containter');
+        window.location.replace(base_admin + "/thankyou");
+    });
 }
 
 if (group == 2) {
-    time = 30;
-    TIME_LIMIT = parseInt(time);
     $('.micro-exam').addClass('d-none');
+    document.getElementById("app").innerHTML = formatTime(TIME_GHINHO);
+} else {
+    document.getElementById("app").innerHTML = formatTime(TIME_LIMIT);
 }
 
-document.getElementById("app").innerHTML = `${formatTime(TIME_LIMIT)}`;
 $('.countdown-1').removeClass('d-none');
 
 setTimeout(function() {
@@ -44,27 +51,33 @@ setTimeout(function() {
 }, 4000);
 
 function onTimesUp() {
+    timePassed = 0;
     clearInterval(timerInterval);
 }
 
 function startTimer() {
     timerInterval = setInterval(() => {
         timePassed = timePassed += 1;
-        timeLeft = TIME_LIMIT - timePassed;
-        document.getElementById("app").innerHTML = formatTime(
-        timeLeft
-        );
+
+        if (group == 2 && $('.micro-exam').hasClass('d-none')) {
+            timeLeft = TIME_GHINHO - timePassed;
+        } else if (group == 2 && !$('.micro-exam').hasClass('d-none')) {
+            timeLeft = TIME_LAMBAI - timePassed;
+        } else {
+            timeLeft = TIME_LIMIT - timePassed;
+        }
+
+        document.getElementById("app").innerHTML = formatTime(timeLeft);
         setRemainingPathColor(timeLeft);
 
         if (timeLeft === 0) {
             if (group == 2 && $('.micro-exam').hasClass('d-none')) {
                 onTimesUp();
-                time = 50;
-                TIME_LIMIT = parseInt(time)
+
                 $('.content-exam').addClass('d-none');
                 $('.micro-exam').removeClass('d-none');
 
-                document.getElementById("app").innerHTML = `${formatTime(TIME_LIMIT)}`;
+                document.getElementById("app").innerHTML = formatTime(TIME_LAMBAI);
                 $('.countdown-1').removeClass('d-none');
                 $('.countdown-2').addClass('d-none').attr('style', '');
 

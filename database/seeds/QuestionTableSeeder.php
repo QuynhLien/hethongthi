@@ -162,63 +162,71 @@ class QuestionTableSeeder extends Seeder
         ];
 
         $content2[2] = [
-            'A: YUKAchan! Hôm nay có gì đó khác khác nhỉ! <br><br>
-            B: Hể? Vậy sao? <br><br>
-            A: UH. A không. Hoàn toàn khác… <br><br>
-            B: Thật ra, hôm nay, có hẹn hò đấy! Mong chờ quá đây nè!!! <br><br>
-            A: Ô vậy à! Hay nhỉ! Phải cái anh Giám đốc bên xí nghiệp IT đấy không? <br><br>
-            B: Đúng, đúng, đúng! Vừa hào hoa, vừa thông minh… Kiểu người thật tuyệt!!! <br><br>
-            A: Hay quá nhỉ! Ghen tỵ quá đi! <br><br>'
+            'A: Uống đi, uống đi <br><br>
+			    Chết tiệt! Con bồ nó cắm sừng tôi!<br><br>
+            B: Hiểu mà..Hiểu mà…Thôi… <br><br>
+            A: Hôm nay cùng uống đến sáng luôn!!!<br><br>
+            B: Hả ? Vậy kế hoạch ngày mai thì sao?<br><br>
+			   Mai chả phải đi sớm hay sao?<br><br>
+            A: Đủ rồi đấy! Quên chuyện ngày mai đi!<br><br>
+            B: Không sao chứ?!?<br><br>
+            A: UH. Chết tiệt! <br><br>'
         ];
 
         $content2[3] = [
-            'A: YUKAchan! Hôm nay có gì đó khác khác nhỉ! <br><br>
-            B: Hể? Vậy sao? <br><br>
-            A: UH. A không. Hoàn toàn khác… <br><br>
-            B: Thật ra, hôm nay, có hẹn hò đấy! Mong chờ quá đây nè!!! <br><br>
-            A: Ô vậy à! Hay nhỉ! Phải cái anh Giám đốc bên xí nghiệp IT đấy không? <br><br>
-            B: Đúng, đúng, đúng! Vừa hào hoa, vừa thông minh… Kiểu người thật tuyệt!!! <br><br>
-            A: Hay quá nhỉ! Ghen tỵ quá đi! <br><br>'
+            'A: ...Vậy, tôi xin phép về trước ạ!<br><br>
+            B: Ơ? Về đó hả?<br><br>
+            A: Vâng!<br><br>
+            B: Sau đây mọi người cùng đi uống đấy!<br><br>
+			A: Vậy à! Hôm nay tình trạng sức khỏe tôi có chút…<br><br>
+            B: Chị nói gì thế...?<br><br>
+			   Chả phải từ nãy giờ chị toàn nhìn vô điện thoại, và cười suốt hay sao?<br><br>
+            A: .........<br><br>'
         ];
 
         $content2[4] = [
-            'A: YUKAchan! Hôm nay có gì đó khác khác nhỉ! <br><br>
-            B: Hể? Vậy sao? <br><br>
-            A: UH. A không. Hoàn toàn khác… <br><br>
-            B: Thật ra, hôm nay, có hẹn hò đấy! Mong chờ quá đây nè!!! <br><br>
-            A: Ô vậy à! Hay nhỉ! Phải cái anh Giám đốc bên xí nghiệp IT đấy không? <br><br>
-            B: Đúng, đúng, đúng! Vừa hào hoa, vừa thông minh… Kiểu người thật tuyệt!!! <br><br>
-            A: Hay quá nhỉ! Ghen tỵ quá đi! <br><br>'
+            'A: ...Vậy, tôi xin phép về trước ạ!<br><br>
+            B: Ơ? Về đó hả?<br><br>
+            A: Vâng!<br><br>
+            B: Sau đây mọi người cùng đi uống đấy!<br><br>
+			A: Vậy à! Hôm nay tình trạng sức khỏe tôi có chút…<br><br>
+            B: Chị nói gì thế...?<br><br>
+			   Chả phải từ nãy giờ chị toàn nhìn vô điện thoại, và cười suốt hay sao?<br><br>
+            A: .........<br><br>'
         ];
 
         $content2[5] = [
-            'A: YUKAchan! Hôm nay có gì đó khác khác nhỉ! <br><br>
+            'A: YOSHIDA KUN! Hôm nay bầu không khí có gì đó khác khác nhỉ!<br><br>
             B: Hể? Vậy sao? <br><br>
-            A: UH. A không. Hoàn toàn khác… <br><br>
+            A: UH. A không. Hoàn toàn khác…<br><br>
             B: Thật ra, hôm nay, có hẹn hò đấy! Mong chờ quá đây nè!!! <br><br>
-            A: Ô vậy à! Hay nhỉ! Phải cái anh Giám đốc bên xí nghiệp IT đấy không? <br><br>
-            B: Đúng, đúng, đúng! Vừa hào hoa, vừa thông minh… Kiểu người thật tuyệt!!! <br><br>
-            A: Hay quá nhỉ! Ghen tỵ quá đi! <br><br>'
+            A: Ô vậy à! Hay nhỉ!<br><br>
+			   A…Phải cô trưởng phòng bên ngân hàng APPURU đấy không?<br><br>
+            B: Đúng, đúng, đúng! Vừa dịu dàng, vừa thông minh… Kiểu người thật tuyệt!!!<br><br>
+            A: Hay quá nhỉ! Ghen tỵ quá đi!<br><br>'
         ];
 
         $content2[6] = [
-            'A: YUKAchan! Hôm nay có gì đó khác khác nhỉ! <br><br>
-            B: Hể? Vậy sao? <br><br>
-            A: UH. A không. Hoàn toàn khác… <br><br>
-            B: Thật ra, hôm nay, có hẹn hò đấy! Mong chờ quá đây nè!!! <br><br>
-            A: Ô vậy à! Hay nhỉ! Phải cái anh Giám đốc bên xí nghiệp IT đấy không? <br><br>
-            B: Đúng, đúng, đúng! Vừa hào hoa, vừa thông minh… Kiểu người thật tuyệt!!! <br><br>
-            A: Hay quá nhỉ! Ghen tỵ quá đi! <br><br>'
+            'A: Uống đi, uống đi <br><br>
+			    Chết tiệt! Con bồ nó cắm sừng tôi!<br><br>
+            B: Hiểu mà..Hiểu mà…Thôi… <br><br>
+            A: Hôm nay cùng uống đến sáng luôn!!!<br><br>
+            B: Hả ? Vậy kế hoạch ngày mai thì sao?<br><br>
+			   Mai chả phải đi sớm hay sao?<br><br>
+            A: Đủ rồi đấy! Quên chuyện ngày mai đi!<br><br>
+            B: Không sao chứ?!?<br><br>
+            A: UH. Chết tiệt! <br><br>'
         ];
 
         $content2[7] = [
-            'A: YUKAchan! Hôm nay có gì đó khác khác nhỉ! <br><br>
-            B: Hể? Vậy sao? <br><br>
-            A: UH. A không. Hoàn toàn khác… <br><br>
-            B: Thật ra, hôm nay, có hẹn hò đấy! Mong chờ quá đây nè!!! <br><br>
-            A: Ô vậy à! Hay nhỉ! Phải cái anh Giám đốc bên xí nghiệp IT đấy không? <br><br>
-            B: Đúng, đúng, đúng! Vừa hào hoa, vừa thông minh… Kiểu người thật tuyệt!!! <br><br>
-            A: Hay quá nhỉ! Ghen tỵ quá đi! <br><br>'
+            'A: ...Vậy, tôi xin phép về trước ạ!<br><br>
+            B: Ơ? Về đó hả?<br><br>
+            A: Vâng!<br><br>
+            B: Sau đây mọi người cùng đi uống đấy!<br><br>
+			A: Vậy à! Hôm nay tình trạng sức khỏe tôi có chút…<br><br>
+            B: Chị nói gì thế...?<br><br>
+			   Chả phải từ nãy giờ chị toàn nhìn vô điện thoại, và cười suốt hay sao?<br><br>
+            A: .........<br><br>'
         ];
 
         // Cau 3

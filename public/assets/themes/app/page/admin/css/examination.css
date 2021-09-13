@@ -109,3 +109,13 @@ audio.exam::-webkit-media-controls-panel {
   background-color:  #5186be80;
   color: #fff;
 }
+
+.swal-exam .swal2-content {
+  font-size: 18px !important;
+  font-family: initial !important;
+  color: #fff !important;
+}
+
+.swal-exam.swal2-popup {
+  background: url('../../../../../../assets/images/cloudy.svg') !important;
+}
