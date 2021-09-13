@@ -16,20 +16,26 @@ alert: {
 }
 };
 
-const TIME_LIMIT = parseInt(time); //xanh
+var TIME_LIMIT = parseInt(time); //xanh
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
-
-document.getElementById("app").innerHTML = `${formatTime(timeLeft)}`;
-$('.countdown-1').removeClass('d-none');
 
 if (moment(moment(time_start).add(20, 'minutes').format('YYYY-MM-DD HH:mm:ss')) <= moment()) { //chi cho thi trong 20p, het se bi session time out
     onTimesUp();
     run_waitMe('.wait-containter');
     window.location.replace(base_admin + "/thankyou");
 }
+
+if (group == 2) {
+    time = 30;
+    TIME_LIMIT = parseInt(time);
+    $('.micro-exam').addClass('d-none');
+}
+
+document.getElementById("app").innerHTML = `${formatTime(TIME_LIMIT)}`;
+$('.countdown-1').removeClass('d-none');
 
 setTimeout(function() {
     $('.countdown-1').addClass('d-none');
@@ -51,13 +57,31 @@ function startTimer() {
         setRemainingPathColor(timeLeft);
 
         if (timeLeft === 0) {
-            onTimesUp();
-            if (next_group) {
-                run_waitMe('.wait-containter');
-                window.location.replace(base_admin + "/examination/" + test + "/" + next_group);
+            if (group == 2 && $('.micro-exam').hasClass('d-none')) {
+                onTimesUp();
+                time = 50;
+                TIME_LIMIT = parseInt(time)
+                $('.content-exam').addClass('d-none');
+                $('.micro-exam').removeClass('d-none');
+
+                document.getElementById("app").innerHTML = `${formatTime(TIME_LIMIT)}`;
+                $('.countdown-1').removeClass('d-none');
+                $('.countdown-2').addClass('d-none').attr('style', '');
+
+                setTimeout(function() {
+                    $('.countdown-1').addClass('d-none');
+                    $('.countdown-2').removeClass('d-none');
+                    startTimer();
+                }, 4000);
             } else {
-                run_waitMe('.wait-containter');
-                window.location.replace(base_admin + "/thankyou");
+                onTimesUp();
+                if (next_group) {
+                    run_waitMe('.wait-containter');
+                    window.location.replace(base_admin + "/examination/" + test + "/" + next_group);
+                } else {
+                    run_waitMe('.wait-containter');
+                    window.location.replace(base_admin + "/thankyou");
+                }
             }
         }
     }, 1000);

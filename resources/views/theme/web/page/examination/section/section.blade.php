@@ -9,7 +9,7 @@
         {{$question->content}}
     </div>
 
-    <div class="@if (count($questions) > 1) col-2 @else col-11 @endif pd-x-0" style="margin: auto; margin-left: 0; margin-right: 0; text-align: center">
+    <div class="@if (count($questions) > 1) col-2 @else col-11 @endif pd-x-0 micro-exam" style="margin: auto; margin-left: 0; margin-right: 0; text-align: center">
         <img src="{{asset('assets/images/microphone.svg')}}" height="30"  class="microphone record" id="mic_{{$key + 1}}" data-id="{{$key + 1}}">
         <img src="{{asset('assets/images/icon-60.png')}}" height="30"  class="microphone stop d-none" id="unmic_{{$key + 1}}" data-id="{{$key + 1}}">
     </div>
