@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/','Auth\AuthController@api_index')->name('api.admin.index');
+Route::get('/','Auth\AuthController@api_index')->name('api.admin.index');
 Route::post('/login/v1','Auth\AuthController@api_login')->name('api.login.post');
 Route::post('/login/attendance/v1','Auth\AuthController@api_login_attendance')->name('api.login.attendance.post');
 Route::post('/forgot-admin/v1','Auth\AuthController@api_forgot_admin')->name('api.forgot.admin.post');
