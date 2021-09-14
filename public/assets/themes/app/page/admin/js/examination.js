@@ -24,7 +24,7 @@ let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
 
-if (moment(moment(time_start).add(20, 'minutes').format('YYYY-MM-DD HH:mm:ss')) <= moment()) { //chi cho thi trong 20p, het se bi session time out
+if (moment(moment(time_start).add(30, 'minutes').format('YYYY-MM-DD HH:mm:ss')) <= moment()) { //chi cho thi trong 20p, het se bi session time out
     onTimesUp();
     Swal.fire({
         text: "Đã hết thời gian làm bài!",
