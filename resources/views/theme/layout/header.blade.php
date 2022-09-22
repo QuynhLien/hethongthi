@@ -22,7 +22,7 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <nav class="nav">
-                                <a href="{{route('admin.page.logout')}}" class="nav-link tx-16 beforeunload logout" id="logout" style="position: relative; padding: 1rem;">
+                                <a href="{{route('web.logout')}}" class="nav-link tx-16 beforeunload logout" id="logout" style="position: relative; padding: 1rem;">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.51172 29.01465">
                                     <defs><style>#b0189752-4eeb-4929-b1f5-834c552bace7{fill:#3d6b65;}</style></defs>
                                     <g id="b0189752-4eeb-4929-b1f5-834c552bace7" data-name="Layer 2"><g id="ba70bd8c-748b-43e8-9d77-5397fbed70b4" data-name="ID-34"><path d="M18.541,9.52246V7.28613a7.28565,7.28565,0,1,0-14.57129,0V9.52246H0v8.23633a11.25586,11.25586,0,0,0,22.51172,0V9.52246ZM5.46973,7.28613a5.78565,5.78565,0,1,1,11.57129,0V9.52246H5.46973Zm15.542,10.47266a9.75586,9.75586,0,0,1-19.51172,0V11.02246H21.01172Z"/><path d="M11.25537,15.34033a2.12571,2.12571,0,0,0-.76037,4.11206v2.65534h1.52075V19.45239a2.12571,2.12571,0,0,0-.76038-4.11206Z"/></g></g></svg>

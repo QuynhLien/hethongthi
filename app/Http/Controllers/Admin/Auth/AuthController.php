@@ -24,17 +24,17 @@ class AuthController extends Controller
         try{         
             $token = Cookie::get('_token_mainte');
             if($token && Auth::check()){
-                return redirect()->route('admin.page.index');
+                return redirect()->route('web');
             }else{
                 return view('theme.web.auth.login');
             }
         }catch(\Exception $e){
-            return redirect()->route('admin.page.login');
+            return redirect()->route('index.login');
         }
     }
 
     public function index(Request $request){
-        return redirect()->route('operator.dashboard');
+        return redirect()->route('web.dashboard');
     }
 
     public function logout(){
@@ -43,9 +43,9 @@ class AuthController extends Controller
             $this->blacklist($token);
             Cookie::queue(Cookie::forget('_token_mainte'));
          
-            return redirect()->route('admin.page.login');
+            return redirect()->route('index.login');
         }catch(\Exception $e){
-            return redirect()->route('admin.page.login');
+            return redirect()->route('index.login');
         }
     }
 

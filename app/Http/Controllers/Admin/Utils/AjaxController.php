@@ -114,9 +114,9 @@ class AjaxController extends Controller
                 Auth::logout();
             }
             session()->flush();
-            return redirect()->route('admin.page.login');
+            return redirect()->route('index.login');
         } catch (\Exception $e) {
-            return redirect()->route('admin.page.login');
+            return redirect()->route('index.login');
         }
     }
     

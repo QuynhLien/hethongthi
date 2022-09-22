@@ -33,7 +33,7 @@ class UtilsController extends Controller
                 return view('theme.web.login.index');
             }
         } catch (\Exception $e) {
-            return redirect()->route('admin.page.login');
+            return redirect()->route('index.login');
         }
     }
 }

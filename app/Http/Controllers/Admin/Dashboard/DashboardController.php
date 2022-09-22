@@ -35,7 +35,7 @@ class DashboardController extends Controller
                 ]);
             } else if ($check_core && Carbon::parse($check_core->date) <= Carbon::now()) { // redirect random screen 2
                 // return 2;
-                return redirect()->route('operator.random');
+                return redirect()->route('web.random');
             } else { // dashboard 0
                 // return 1;
                 return view('theme.web.dashboard.index', [

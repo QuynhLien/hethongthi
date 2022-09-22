@@ -43,40 +43,33 @@ class Helper extends HelperBase
                 return self::JsonExport(403,$validator->errors()->first());
             }
 
-            $url = route('api.login.operator.post');
-            $data = [
-                'mail'      => $request->mail,
-                'password'  => $request->password
+            $credentials = [
+                'mail' => $request->mail,
+                'password' => $request->password,
+                'role'  => [1,2]
             ];
-            $response = Http::withOptions(['verify' => false])->post($url, $data);
-            $data_callback = $response->json();
-          
-            if($response->status() == 200){
-                $credentials = [
-                    'mail' => $request->mail,
-                    'password' => $request->password,
-                    'role'  => [1,2]
-                ];
-                $token = $data_callback['data']['token'];
-                if(Auth::attempt($credentials)){
-                    $user = Auth::user();
-                    if(!empty($user->remember_token)) {
-                        $this->blacklist($user->remember_token);
-                    }
+            $token = auth('api')->attempt($credentials);
+            
+            if (!$token) {
+                return self::JsonExport(403, config('constant.login_wrong'));
+            }
 
-                    $user->remember_token = $token;
-                    $user->save();
-                    $user_token = [];
-                    $user_token['id'] = $user->id;
-
-                    $cookie = cookie('_token_mainte', $token.'|'.Crypt::encryptString(json_encode($user_token)), env('JWT_TTL'));
-
-                    return self::JsonExportWithCookie(200, config('constant.msg_200'), null, $cookie);
-                }else{
-                    return self::JsonExport(403, config('constant.login_wrong'));
+            if(Auth::attempt($credentials)){
+                $user = Auth::user();
+                if(!empty($user->remember_token)) {
+                    $this->blacklist($user->remember_token);
                 }
+
+                $user->remember_token = $token;
+                $user->save();
+                $user_token = [];
+                $user_token['id'] = $user->id;
+
+                $cookie = cookie('_token_mainte', $token.'|'.Crypt::encryptString(json_encode($user_token)), env('JWT_TTL'));
+
+                return self::JsonExportWithCookie(200, config('constant.msg_200'), null, $cookie);
             }else{
-                return self::JsonExport($response->status(),$data_callback['msg']);
+                return self::JsonExport(403, config('constant.login_wrong'));
             }
            
         } catch (\Exception $e) {

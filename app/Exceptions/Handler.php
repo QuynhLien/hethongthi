@@ -62,7 +62,7 @@ class Handler extends ExceptionHandler
     protected function unauthenticated($request, AuthenticationException $exception)
     {
         if (!$request->expectsJson()) {
-            return redirect()->route('admin.page.login');
+            return redirect()->route('index.login');
         } else {
             return $this->JsonExport(422, 'Unauthenticated');
         }
