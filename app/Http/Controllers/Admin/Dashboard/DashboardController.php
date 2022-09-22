@@ -23,13 +23,13 @@ class DashboardController extends Controller
         $check_core = Model\Core::whereDate('date', Carbon::parse(Carbon::now())->format('Y-m-d'))->where('status', 0)->first();
         // if ($user->test_id) { // redirect to exam screen 3
         //     return 4;
-        //     return view('theme.web.page.core.index', [
+        //     return view('theme.web.core.index', [
         //         'page_title' => 'exem time Danh sách đợt thi'
         //     ]);
         // } else {
             if ($check_core && Carbon::parse($check_core->date) > Carbon::now()) { // waiting time 1
                 // return 3;
-                return view('theme.web.page.dashboard.waiting.index', [
+                return view('theme.web.dashboard.waiting.index', [
                     'page_title' => 'Waiting time',
                     'time_start' => Carbon::parse($check_core->date)->format('Y-m-d H:i:s')
                 ]);
@@ -38,7 +38,7 @@ class DashboardController extends Controller
                 return redirect()->route('operator.random');
             } else { // dashboard 0
                 // return 1;
-                return view('theme.web.page.dashboard.index', [
+                return view('theme.web.dashboard.index', [
                     'page_title' => 'Dashborad bla bla'
                 ]);
             }

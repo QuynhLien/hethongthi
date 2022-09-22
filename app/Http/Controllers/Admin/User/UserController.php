@@ -19,7 +19,7 @@ class UserController extends Controller
     public function user_get_list(){
         $user = $this->getInfoUserCookie();
         if (in_array($user['role'], [1])) {
-            return view('theme.web.page.user.index', [
+            return view('theme.web.user.index', [
                 'page_title' => '管理ユーザー一覧'
             ]);
         } else {

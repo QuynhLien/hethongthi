@@ -15,20 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','Auth\AuthController@login')->name('admin.page.index.login');
 Route::get('/login','Auth\AuthController@login')->name('admin.page.login');
-Route::get('/forgot', 'Auth\AuthController@forgot')->name('admin.page.forgot');
-Route::get('/reset-password/{token}', 'Auth\AuthController@forgot_password_admin')->name('admin.page.reset_link');
 
 Route::group(['middleware' => ['auth.web']], function () {
-    Route::get('/', 'Auth\AuthController@index')->name('admin.page.index');
-
+    Route::get('/', 'Auth\AuthController@index')->name('web');
     Route::get('/logout','Auth\AuthController@logout')->name('admin.page.logout');
-
-    Route::get('/change-password', 'Auth\AuthController@change_password')->name('admin.page.change.password');
-    
-    //USER
-    Route::group(['namespace' => 'User', 'prefix' => 'user'], function () {
-        Route::get('/', 'UserController@user_get_list')->name('operator.medical.user');
-    });
 
     //TEST
     Route::group(['namespace' => 'Test', 'prefix' => 'test'], function () {

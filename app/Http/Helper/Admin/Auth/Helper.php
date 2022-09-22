@@ -85,40 +85,6 @@ class Helper extends HelperBase
         }
     }
 
-    public function ajaxForgot($request) {
-        $rules = array(
-            'email' => 'required|email'
-        );
-        $validator = Validator::make($request->all(), $rules);
-        if ($validator->fails()) {
-            return self::JsonExport(403, $validator->errors()->first());
-        } else {
-            try {
-                $check = Model\MUser::whereMail($request->email)
-                ->whereStatus(1)
-                ->whereIn('role', config('constant.login_operator'))
-                ->first();
-                if(!$check){
-                    return self::JsonExport(403, 'メールアドレスが存在しません');
-                }
-
-                $time = time();
-                $key = config('constant.XOR_KEY');
-                $hash = md5($check->id . $check->mail . $time . $key);
-                $token = base64_encode($check->id . '|' . $check->mail . '|' . $time . '|' . $hash);
-
-                //send link to mail
-                $link = route('admin.page.reset_link', $token);
-                ForgotSendMailOperator::dispatch($check->mail, $link);
-
-                return self::JsonExport(200, 'パスワードリセットリンクがメールアドレスに送信されましたご確認ください');
-            } catch (\Exception $e) {
-                $this->__writeLog500($request->ip(), $request->method(), $request->path(), $e);
-                return self::JsonExport(500, config('constant.msg_500'));
-            }
-        }
-    }
-
     public function checkLink($token){
         try {
             $token_decrypt = base64_decode($token);

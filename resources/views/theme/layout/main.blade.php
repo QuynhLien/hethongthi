@@ -6,10 +6,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/png" href="{{asset('/assets/images/vietnhat.svg')}}">
     <title>@yield('page_title')</title>
-    @include('theme.layout.main_css_exam')
+    @include('theme.layout.main_css')
 </head>
 <body class="slim-sticky-sidebar wait-containter">
-@include('theme.layout.header_exam')
+@include('theme.layout.header')
 <div class="slim-body">
     <div class="slim-mainpanel">
         <div class="container d-block" style="overflow: hidden; overflow-y: scroll;">
@@ -18,9 +18,6 @@
         </div><!-- container -->
     </div><!-- slim-mainpanel -->
 </div>
-
-@include('theme.layout.modal_change_password')
 @include('theme.layout.main_js')
-
 </body>
 </html>

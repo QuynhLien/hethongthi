@@ -2578,4 +2578,3 @@ Popper.placements = placements;
 Popper.Defaults = Defaults;
 
 export default Popper;
-//# sourceMappingURL=popper.js.map

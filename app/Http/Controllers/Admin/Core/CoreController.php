@@ -20,7 +20,7 @@ class CoreController extends Controller
     public function get_list_core(){
         $user = $this->getInfoUserCookie();
         if (in_array($user['role'], [2])) {
-            return view('theme.web.page.core.index', [
+            return view('theme.web.core.index', [
                 'page_title' => 'Danh sách đợt thi'
             ]);
         }
@@ -30,7 +30,7 @@ class CoreController extends Controller
         $user = $this->getInfoUserCookie();
         if (in_array($user['role'], [2])) {
             $name_core = Model\Core::find($id_core)->name;
-            return view('theme.web.page.test.index', [
+            return view('theme.web.test.index', [
                 'page_title' => 'Danh sách đề thi '.$name_core,
                 'core_id' => $id_core
             ]);

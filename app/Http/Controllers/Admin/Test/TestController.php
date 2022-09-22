@@ -20,7 +20,7 @@ class TestController extends Controller
     public function get_list_test(){
         $user = $this->getInfoUserCookie();
         if (in_array($user['role'], [2])) {
-            return view('theme.web.page.test.index', [
+            return view('theme.web.test.index', [
                 'page_title' => 'Danh sách đề thi'
             ]);
         }
@@ -30,7 +30,7 @@ class TestController extends Controller
         $user = $this->getInfoUserCookie();
         if (in_array($user['role'], [2])) {
             $code_test = Model\Test::find($id_test)->code;
-            return view('theme.web.page.group.index', [
+            return view('theme.web.group.index', [
                 'page_title' => 'Danh sách các phần thi của đề thi '.$code_test,
                 'test_id' => $id_test
             ]);

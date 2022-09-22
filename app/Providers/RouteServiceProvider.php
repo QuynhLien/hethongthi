@@ -45,8 +45,6 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapApiRoutes();
         $this->mapWebRoutes();
         $this->mapAjaxRoutes();
-        $this->mapViewRoutes();
-        //
     }
 
     /**
@@ -63,6 +61,14 @@ class RouteServiceProvider extends ServiceProvider
             ->group(base_path('routes/web.php'));
     }
 
+    protected function mapAjaxRoutes()
+    {
+        Route::prefix('ajax')
+            ->middleware('web')
+            ->namespace('App\Http\Controllers\Admin')
+            ->group(base_path('routes/ajax.php'));
+    }
+
     /**
      * Define the "api" routes for the application.
      *
@@ -76,21 +82,5 @@ class RouteServiceProvider extends ServiceProvider
             ->middleware('api')
             ->namespace('App\Http\Controllers\Api')
             ->group(base_path('routes/api.php'));
-    }
-
-    protected function mapAjaxRoutes()
-    {
-        Route::prefix('ajax')
-            ->middleware('web')
-            ->namespace('App\Http\Controllers\Admin')
-            ->group(base_path('routes/ajax.php'));
-    }
-
-    protected function mapViewRoutes()
-    {
-        Route::prefix('view')
-            ->middleware('web')
-            ->namespace('App\Http\Controllers\View')
-            ->group(base_path('routes/view.php'));
     }
 }

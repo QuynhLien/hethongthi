@@ -30,7 +30,7 @@ class UtilsController extends Controller
             if (Auth::check()) {
                 return redirect()->route(app('setting_main')->default_page);
             } else {
-                return view('theme.web.page.login.index');
+                return view('theme.web.login.index');
             }
         } catch (\Exception $e) {
             return redirect()->route('admin.page.login');

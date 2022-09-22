@@ -13,7 +13,6 @@ use Storage;
 
 class AuthController extends Controller
 {
-    //
     protected $instance;
 
     public function __construct()
@@ -27,7 +26,7 @@ class AuthController extends Controller
             if($token && Auth::check()){
                 return redirect()->route('admin.page.index');
             }else{
-                return view('theme.web.page.auth.login');
+                return view('theme.web.auth.login');
             }
         }catch(\Exception $e){
             return redirect()->route('admin.page.login');
@@ -47,49 +46,6 @@ class AuthController extends Controller
             return redirect()->route('admin.page.login');
         }catch(\Exception $e){
             return redirect()->route('admin.page.login');
-        }
-    }
-
-    public function forgot()
-    {
-        try {
-           return view('theme.web.page.auth.forgot');
-        } catch (\Exception $e) {
-            return redirect()->route('admin.page.login');
-        }
-    }
-
-    public function forgot_password_admin($token)
-    {
-        try {
-            $checkToken = $this->instance->checkLink($token);
-            if ($checkToken === false) {
-                return view('welcome', [
-                    'messages' => 'パスワードリセットリンクの有効期限が切れています'
-                ]);
-            }
-            return view('theme.web.page.auth.forgot_change_password', [
-                'user' => $checkToken,
-                'token' => $token
-            ]);
-        } catch (\Exception $e) {
-            return view('welcome', [
-                'messages' => 'パスワードリセットリンクの有効期限が切れています'
-            ]);
-        }
-    }
-
-    public function batch_monthly(){
-        Artisan::call('monthly:run');
-        return 'Xong rồi anh Hải ạ!';
-
-    }
-
-    public function change_password(Request $request){
-        try {
-            return view('theme.web.page.auth.change_password');
-        } catch (\Exception $e) {
-            return view('errors.403');
         }
     }
 

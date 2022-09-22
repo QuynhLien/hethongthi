@@ -17,7 +17,7 @@ class ThankyouController extends Controller
     }
 
     public function get_thankyou() {
-        return view('theme.web.page.dashboard.thankyou.index', [
+        return view('theme.web.dashboard.thankyou.index', [
             'page_title' => 'Thank you',
         ]);
     }

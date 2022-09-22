@@ -16,7 +16,6 @@
 <link rel="stylesheet" href="{{asset('assets/themes/app/lib/iCheck/all.css')}}">
 <link rel="stylesheet" href="{{asset('assets/themes/app/lib/context-menu/jquery.contextMenu.min.css')}}">
 <link rel="stylesheet" href="{{asset('assets/themes/app/lib/sweet2/sweet2.css')}}">
-@yield('css')
-<!-- Slim CSS -->
 <link rel="stylesheet" href="{{asset('assets/themes/app/css/slim.css')}}">
-<link rel="stylesheet" href="{{asset('assets/themes/app/page/admin/css/main.css')}}">
+<link rel="stylesheet" href="{{asset('assets/themes/app/page/css/main.css')}}">
+@yield('css')

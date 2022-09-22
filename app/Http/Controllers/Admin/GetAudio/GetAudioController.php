@@ -30,7 +30,7 @@ class GetAudioController extends Controller
             ];
         }
 
-        return view('theme.web.page.get_audio.index', [
+        return view('theme.web.get_audio.index', [
             'page_title' => 'Danh sách bài làm',
             'users' => $users
         ]);

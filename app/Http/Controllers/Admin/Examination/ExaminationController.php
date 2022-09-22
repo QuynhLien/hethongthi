@@ -26,7 +26,7 @@ class ExaminationController extends Controller
             $group = Model\Group::where('test_id', $id_test)->where('stt', $stt_group)->first();
             $next_group = Model\Group::where('test_id', $id_test)->where('stt', '>', $stt_group)->orderBy('stt')->first();
             $questions = Model\Question::where('group_id', $group->id)->get();
-            return view('theme.web.page.examination.index', [
+            return view('theme.web.examination.index', [
                 'page_title'    => 'パート'.$group->stt.'　'.$group->name,
                 'time_start'    => $core->date,
                 'time'          => $group->time,

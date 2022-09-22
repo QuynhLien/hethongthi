@@ -238,7 +238,8 @@ class QuestionTableSeeder extends Seeder
             (VD: Bạn trò chuyện với bạn thân, người trong gia đình, người yêu, giáo viên chủ nhiệm…) <br><br>
             *Yêu cầu đề bài:  <br><br>
             1/ Cuộc hội thoại giữa 2 nhân vật tối thiểu phải từ 5 câu trở lên.  <br><br>
-            2/ Khi trình bày, bạn cần biểu đạt được cảm xúc của nhân vật trong lời thoại. <br><br>';
+            2/ Khi trình bày, bạn cần biểu đạt được cảm xúc của nhân vật trong lời thoại. <br><br>
+            3/ Tổng thời gian vừa làm vừa ghi âm là 10p. <br><br>';
             
             // $content4 = 'Bạn hãy tự phát họa cuộc đàm thoại giữa bạn và 1 nhân vật nào đó theo chủ đề sau: <br><br>
             // 話題：パートナー、親友、仕事関係者など、信頼している人に裏切られました。誰かにそんなことを語ります。何と言いますか？会話しましょう‼<br><br>
