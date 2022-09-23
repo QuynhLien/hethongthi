@@ -6,6 +6,12 @@
 
 ./hethongthi.sql
 
+**Database Name:** hethongthi
+
+**Username:** root
+
+**Password:**
+
 ## Account login:
 
 **UserName:** student
