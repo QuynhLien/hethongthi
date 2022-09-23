@@ -35,7 +35,7 @@ class Helper extends HelperBase
         try {
        
             $rules = [
-                'mail' => 'required',
+                'username' => 'required',
                 'password' => 'required'
             ];
             $validator = Validator::make($request->all(),$rules);
@@ -44,7 +44,7 @@ class Helper extends HelperBase
             }
 
             $credentials = [
-                'mail' => $request->mail,
+                'username' => $request->username,
                 'password' => $request->password,
                 'role'  => [1,2]
             ];

@@ -2,15 +2,16 @@
     width: 31%;
     height: 25vh;
     border: 2px dashed #fff;
-    margin: 2px;
-    text-align: center;
-    padding-top: 3.5vh;
+    margin: .5%;
     color: #fff;
-    font-size: 65px;
+    font-size: 5rem;
     font-weight: bold;
     font-family: initial;
     transition: background-color 0.25s;
     background: #ffffff29;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .row-random {
@@ -20,4 +21,10 @@
 
 .on-random {
     background-color: #0e3763;
+}
+
+@media only screen and (min-width: 37.5em) {
+    .count-test {
+        font-size: 6rem;
+    }
 }

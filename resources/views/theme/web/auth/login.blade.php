@@ -19,7 +19,7 @@
                     <div class="row">
                         <label class="col-sm-12 form-control-label">ログインID</label>
                         <div class="col-sm-12 mg-t-10 mg-sm-t-0">
-                            <input name="mail" class="form-control rounded-7" 
+                            <input name="username" class="form-control rounded-7" 
                                 maxlength="40" data-parsley-maxlength="40"
                                 data-parsley-maxlength-message="ログインIDが40文字を超えています"
                                 required data-parsley-required-message="必須項目です">

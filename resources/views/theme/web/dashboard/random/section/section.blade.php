@@ -6,5 +6,5 @@
     @endfor
 </div>
 <div style="text-align: center;">
-    <button style="margin-top: 20px; padding: 5px 20px;" id="btn_random">ランダム</button>
+    <button style="margin-top: 20px;" id="btn_random">ランダム</button>
 </div>

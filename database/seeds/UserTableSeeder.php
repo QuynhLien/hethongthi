@@ -14,41 +14,27 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        //1: Admin
-        // $mail_admin = ['quynhlien', 'quynhanh', 'quangtay', 'hoangphuc', 'admin5'];
-        // $name_admin = ['Quỳnh Liên', 'Quỳnh Anh', 'Lê Quang Tây', 'Bùi Hoàng Phúc', 'admin5'];
-        // for($i = 0; $i < 5; $i++){
-        //     Model\MUser::create([
-        //         'mail' => $mail_admin[$i],
-        //         'name' => $name_admin[$i],
-        //         'password' => Hash::make('123456'),
-        //         'role' => 1,
-        //         'test_id' => 'General OS '.$i,
-        //         'code' => 'General OS '.$i
-        //     ]);
-        // }
-
-        //2: Teacher
-        $mail_teacher = ['quynhlien@mail.com', 'quynhanh@mail.com', 'quangtay@mail.com', 'hoangphuc@mail.com', 'teacher@mail.com'];
-        $name_teacher = ['Quỳnh Liên', 'Quỳnh Anh', 'Lê Quang Tây', 'Bùi Hoàng Phúc', 'teacher'];
+        //Role 1: Teacher
+        $mail_teacher = ['quynhlien', 'quynhanh', 'quangtay', 'hoangphuc', 'teacher'];
+        $name_teacher = ['Quỳnh Liên', 'Quỳnh Anh', 'Lê Quang Tây', 'Bùi Hoàng Phúc', 'Teacher'];
         for($i = 0; $i < 5; $i++){
             Model\MUser::create([
                 'mail' => $mail_teacher[$i],
                 'name' => $name_teacher[$i],
                 'password' => Hash::make('123456'),
-                'role' => 2
+                'role' => 1
             ]);
         }
 
-        //3: Student
-        $mail_student = ['hoangkhang@mail.com', 'minhthuan@mail.com', 'huuduy@mail.com', 'macly@mail.com', 'daihiep@mail.com', 'ngocnam@mail.com', 'vantai@mail.com'];
-        $name_student = ['Nguyễn Hoàng Khang', 'Nguyễn Huỳnh Minh Thuận', 'Trần Hữu Duy', 'Thạch Mạc Ly', 'La Đại Hiệp', 'Phạm Ngọc Nam', 'Nguyễn Văn Tài'];
+        //Role 2: Student
+        $mail_student = ['hoangkhang', 'minhthuan', 'huuduy', 'macly', 'daihiep', 'ngocnam', 'vantai', 'student'];
+        $name_student = ['Nguyễn Hoàng Khang', 'Nguyễn Huỳnh Minh Thuận', 'Trần Hữu Duy', 'Thạch Mạc Ly', 'La Đại Hiệp', 'Phạm Ngọc Nam', 'Nguyễn Văn Tài', 'Student'];
         for($i = 0; $i < 7; $i++){
             Model\MUser::create([
                 'mail' => $mail_student[$i],
                 'name' => $name_student[$i],
                 'password' => Hash::make('123456'),
-                'role' => 2, //'role' => 3,
+                'role' => 2,
                 'test_id' => $i+1
             ]);
         }

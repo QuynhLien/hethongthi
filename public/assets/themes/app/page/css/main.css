@@ -177,7 +177,7 @@ body {
   height: 20px;
   padding: 0px;
   border: 0px;
-  border-radius: unset;
+  border-radius: 50%;
   margin-right: 13px; }
 
 .modal .modal-content {
@@ -639,12 +639,12 @@ span.tx-danger.change {
   /* font-weight: 500 !important; */
   border-radius: 25px !important;
   /* background: linear-gradient(-58deg, #14385c, #3d6b65 100%) !important; */
-  /* color: #ffffff !important; */
+  color: #14385c !important;
   padding: 10px 45px !important;
   border: 0 !important;
   /* font-size: 17.7px !important; */
   /* letter-spacing: 3px; */
-  background: #fff;
+  background: #fff !important;
   font-weight: bold;
   /* padding: 5px 30px; */} 
 
@@ -852,8 +852,27 @@ button {
   background:  #fff !important;
   border-radius: 0px !important;
   font-weight: bold;
+  transition-duration: 0.25s !important;
+  padding: 11px 52px !important;
+  cursor: pointer;
 }
 
 button:hover {
-  border-image-source: linear-gradient(-58deg, #1278e5, #0e2a47 100%) !important;
+  color: #215cca !important;
+  background: rgb(219 230 251) !important;
+}
+
+.dropdown-menu.dropdown-menu-right.show:hover {
+  background-color: aliceblue;
+}
+
+.swal2-content {
+  font-size: 18px !important;
+  font-family: initial !important;
+  color: #fff !important;
+}
+
+.swal2-popup {
+  background-image: url('../../../../../../assets/images/cloudy.svg') !important;
+  background-size: 100% 100% !important;
 }
